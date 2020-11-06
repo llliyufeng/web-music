@@ -1,3 +1,89 @@
 body{
   background-color: #fff;
+  font-family: "Microsoft JhengHei", "Microsoft YaHei", Tohoma, Arial;
+  overflow-y: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.header{
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  position: relative;
+}
+.header .logo{
+  position: absolute;
+  left: -30px;
+}
+.header .logo img{
+  width: 315px;
+  height: 150px;
+  user-select: none;
+}
+.header .register{
+  width: 200px;
+  height: 100%;
+  line-height: 100px;
+  float: right;
+}
+.header .register li{
+  float: left;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+.header .register a{
+  color: #fff;
+  text-decoration: none;
+}
+.header .register a:hover{
+  color: rgb(240, 180, 90);
+}
+.content{
+  width: 100%;
+  height: 660px;
+  background-color: pink;
+}
+.content .content_in{
+  width: 1200px;
+  height: 100%;
+  background-color: skyblue;
+  margin: 0 auto;
+}
+.content .content_in .banner_left{
+  float: left;
+  width: 800px;
+  height: 100%;
+  background-color: #fff;
+}
+.content .content_in .banner_right{
+  float: left;
+  width: 400px;
+  height: 100%;
+  background-color: rgb(117, 34, 34);
+}
+.content .content_in .banner_left .tool{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(143, 102, 102);
+}
+.footer{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(61, 105, 61);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.footer .footer_in{
+  width: 1200px;
+  height: 100%;
+  background-color: yellow;
+  margin: 0 auto;
+
 }
