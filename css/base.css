@@ -1,7 +1,7 @@
 body{
-  background-color: #fff;
   font-family: "Microsoft JhengHei", "Microsoft YaHei", Tohoma, Arial;
   overflow-y: hidden;
+  user-select: none;
 }
 *{
   margin: 0;
@@ -13,7 +13,6 @@ li{
 .header{
   width: 100%;
   height: 100px;
-  background-color: black;
   position: relative;
 }
 .header .logo{
@@ -30,6 +29,7 @@ li{
   height: 100%;
   line-height: 100px;
   float: right;
+  color: rgba(255, 255, 255, 0.5);
 }
 .header .register li{
   float: left;
@@ -38,41 +38,100 @@ li{
   margin-right: 10px;
 }
 .header .register a{
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+
   text-decoration: none;
 }
 .header .register a:hover{
-  color: rgb(240, 180, 90);
+  color: #fff;
 }
 .content{
   width: 100%;
   height: 660px;
-  background-color: pink;
 }
 .content .content_in{
   width: 1200px;
   height: 100%;
-  background-color: skyblue;
   margin: 0 auto;
 }
-.content .content_in .banner_left{
-  float: left;
-  width: 800px;
-  height: 100%;
-  background-color: #fff;
-}
+
 .content .content_in .banner_right{
   float: left;
   width: 400px;
-  height: 100%;
-  background-color: rgb(117, 34, 34);
+  height: 550px;
+  margin-top: 20px;
+
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.banner_right .music_img {
+  width: 201px;
+  height: 180px;
+  background: url(../img/album_cover_player.png);
+  margin:  0 auto;
+  margin-top: 50px;
+
+}
+.banner_right .music_img img{
+  width: 201px;
+  height: 180px;
+  margin-left: -45px;
+}
+
+.banner_right .music_name  a {
+  text-decoration: none;
+opacity: 0.5;
+color: #fff;
+}
+.banner_right .music_singer  a {
+  text-decoration: none;
+opacity: 0.5;
+color: #fff;
+}
+.banner_right .music_ablum  a {
+  text-decoration: none;
+opacity: 0.5;
+color: #fff;
+}
+.banner_right .music_name{
+margin-top: 10px;
+}
+.banner_right .music_singer {
+margin-top: 10px;
+
+}
+.banner_right .music_ablum {
+  margin-top: 10px;
+
+}
+.banner_right  a:hover{
+  opacity: 1; 
+}
+
+.banner_right .music_lyric {
+  margin-top: 40px;
+
+}
+.banner_right .music_lyric .cur{
+  color: aquamarine;
+}
+.banner_right .music_lyric li{
+  line-height: 40px;
+}
+
+
+.content .content_in .banner_left{
+  float: left;
+  width: 800px;
+  height: 500px;
 }
 .content .content_in .banner_left .tool{
   width: 100%;
   height: 50px;
   line-height: 36px;
 margin-top: 20px;
-background-color: black;
 }
 
 .content .content_in .banner_left .tool span{
@@ -104,10 +163,16 @@ background-color: black;
   padding-left: 10px;
 
 }
+.content_in .banner_left .list {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: rgba(255, 255, 255, 0.5);
+  /* margin-bottom: 450px; */
+}
 .content_in .banner_left .list li{
 width: 100%;
 height: 50px;
-background-color: rgb(97, 63, 63);
 opacity: 0.5;
 line-height: 50px;
 border-bottom: 1px solid rgb(255, 255, 255);
@@ -115,6 +180,7 @@ box-sizing: border-box;
 }
 .content_in .banner_left .list li:hover{
  opacity: 1;
+ color: #fff;
   }
 .content_in .banner_left .list li div{
   float: left;
@@ -122,7 +188,6 @@ box-sizing: border-box;
 .content_in .banner_left .list .list_check{
   width: 70px;
 height: 100%;
-background-color: rgb(83, 129, 21);
 text-align: center;
 
 }
@@ -135,28 +200,50 @@ text-align: center;
 .content_in .banner_left .list .list_number{
   width: 30px;
   height: 100%;
-background-color: rgb(209, 70, 70);
 }
 .content_in .banner_left .list .list_singer{
   width: 20%;
   height: 100%;
-background-color: rgb(24, 59, 42);
 }
 .content_in .banner_left .list .list_name{
   width: 50%;
   height: 100%;
-background-color: rgb(199, 96, 147);
+}
+.content_in .banner_left .list .list_name .list_menu{
+float: right;
+margin-top: 10px;
+margin-right: 50px;
+display: none;
+
+
+}
+.content_in .banner_left .list .list_name .list_menu a{
+  margin-right: 6px;
+}
+.list .list_name .list_menu img{
+  width: 30px;
+  height: 30px;
 }
 
 .content_in .banner_left .list .list_time{
   width: 17%;
   height: 100%;
-background-color: rgb(226, 156, 115);
+
+}
+.content .content_in .banner_left .list .list_time a{
+  float: left;
+  margin-top: 10px;
+  display: none;
+
+}
+.content .content_in .banner_left .list .list_time  img{
+  width: 30px;
+  height: 30px;
+  
 }
 .footer{
   width: 100%;
   height: 60px;
-  background-color: rgb(61, 105, 61);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -164,7 +251,120 @@ background-color: rgb(226, 156, 115);
 .footer .footer_in{
   width: 1200px;
   height: 100%;
-  background-color: yellow;
   margin: 0 auto;
 
+}
+.footer .footer_in img{
+  width: 30px;
+  height: 30px;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
+.footer .footer_in .prograss_bar{
+  display: inline-block;
+  width: 600px;
+  height: 100%;
+}
+.footer .footer_in .vol{
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  margin-left: 50px;
+}
+.footer_in .prograss_bar .prograss_bar_info{
+  display: inline-block;
+  
+  width: 500px;
+  height: 25px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-left: 50px;
+  padding-top: 5px;
+}
+.footer_in .prograss_bar .prograss_bar_info span:hover{
+  color: #fff;
+}
+.footer_in .prograss_bar .prograss_bar_info .time{
+  float: right;
+  padding-right: 10px;
+}
+.prograss_bar_line{
+  display: inline-block;
+  width: 500px;
+  height:2px;
+ margin-left: 50px;
+ margin-top: -10px;
+}
+ .line_top{
+  position: absolute;
+  width: 100px;
+  height:2px;
+  background-color: rgb(243, 103, 103);
+}
+ .line_dot{
+  position: absolute;
+  top: -7px;
+  left: 100px;
+  width: 15px;
+  height:15px;
+  border-radius: 50%;
+  background-color: rgb(84, 207, 84);
+}
+.vol .vol_bar {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  width: 80px;
+  height: 2px;
+  background-color: rgb(226, 195, 195);
+  margin-left: 10px;
+}
+.vol .vol_bar .vol_bar_top{
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  background-color: rgb(50, 165, 130);
+}
+.vol .vol_bar .vol_bar_dot{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -4px;
+  left: 20px;
+  background-color: rgb(231, 236, 232);
+  border-radius: 50%;
+}
+/*切换系列*/
+.toggle{
+  display: inline-block;
+}
+.footer_in .player2{
+  display: none;
+}
+.love1{
+  display: none;
+}
+.circle1{
+  display: none;
+}
+.slience{
+  display: none;
+}
+/*背景*/
+.mask{
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  filter: blur(26px);
+}
+.mask .mask_bg{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
