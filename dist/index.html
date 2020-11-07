@@ -3,384 +3,104 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Star] - 音乐播放器</title>
-  <link rel="shortcut icon" href="./img/music.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
-  <link rel="stylesheet" href="./css/base.css">
-  <script src="./js/jquery-1.12.4.js"></script>
-  <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="./js/index.js"></script>
-
+  <link rel="shortcut icon" href="images/music.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/lyric.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
   <div class="header">
-    <div class="logo"><img src="./img/logo1.png" alt="Star"></div>
-    <div class="register">
-      <ul>
-        <a href="javascript:;">
-          <li>登录</li>
-        </a>
-        <a href="javascript:;">
-          <li>注册</li>
-        </a>
-      </ul>
-    </div>
+    <h1 class="logo"><a href="#"><img src="images/logo1.png" alt=""></a></h1>
+    <ul class="register">
+      <li>登录</li>
+      <li>设置</li>
+    </ul>
   </div>
   <div class="content">
     <div class="content_in">
-      <div class="banner_left">
-        <div class="tool">
-          <span><i><img src="./img/star.png" alt=""></i>收藏</span>
-          <span><i><img src="./img/add.png" alt=""></i>添加到</span>
-          <span><i><img src="./img/del.png" alt=""></i>删除</span>
-          <span><i><img src="./img/down.png" alt=""></i>下载</span>
-          <span><i><img src="./img/clear.png" alt=""></i>清除列表</span>
-
+      <div class="content_left">
+        <div class="content_toolbar">
+          <span><i></i>收藏</span>
+          <span><i></i>添加到</span>
+          <span><i></i>下载</span>
+          <span><i></i>删除</span>
+          <span><i></i>清空列表</span>
         </div>
-        <div class="list " data-mcs-theme="dark">
+        <div class="content_list" data-mcs-theme="minimal-dark">
           <ul>
-            <li>
+            <li class="list_title">
               <div class="list_check"><i></i></div>
               <div class="list_number"></div>
-              <div class="list_name"> 歌曲</div>
+              <div class="list_name">歌曲</div>
               <div class="list_singer">歌手</div>
-              <div class="list_time"> 时长</div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
-            </li>
-            <li>
-              <div class="list_check"><i></i></div>
-              <div class="list_number">1</div>
-              <div class="list_name">
-                那年初夏
-                <div class="list_menu">
-                  <a href="javascript:;"><img src="./img/player.png" alt="播放"></a>
-                  <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-                  <a href="javascript:;"><img src="./img/add.png" alt="添加"></a>
-                  <a href="javascript:;"><img src="./img/share.png" alt="分享"></a>
-                </div>
-              </div>
-              <div class="list_singer"> 任然</div>
-              <div class="list_time">
-                <span>3:36</span>
-                <a href="javascript:;"><img src="./img/del.png" alt="删除"></a>
-
-              </div>
+              <div class="list_time">时长</div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="banner_right">
-        <div class="music_img">
-          <a href="javascript:;"><img src="./img/bg.jpg" alt=""></a>
+      <div class="content_right">
+        <div class="song_info">
+          <a href="javascript:;" class="song_info_pic">
+            <img src="source/告白气球.jpg" alt="">
+          </a>
+          <div class="song_info_name">歌曲名称:
+            <a href="javascript:;"> </a>
+          </div>
+          <div class="song_info_singer">歌手名:
+            <a href="javascript:;"> </a>
+          </div>
+          <div class="song_info_ablum">专辑名:
+            <a href="javascript:;"> </a>
+          </div>
         </div>
-        <div class="music_name">
-          歌曲名:
-          <a href="javascript:;">那年初夏</a>
+        <div class="song_lyric_container">
+          <ul class="song_lyric">
+          </ul>
         </div>
-        <div class="music_singer">
-          歌手名:
-          <a href="javascript:;">任然</a>
-
-        </div>
-        <div class="music_ablum">
-          专辑名:
-          <a href="javascript:;">禁猎社 同名专辑</a>
-        </div>
-        <ul class="music_lyric">
-          <li class="cur">第一条歌词</li>
-          <li>第二条歌词</li>
-        </ul>
       </div>
     </div>
   </div>
   <div class="footer">
     <div class="footer_in">
-      <a href="javascript:;" class="pre"><img src="./img/pre.png" alt="上一首"></a>
-      <!-- <div class="toggle"> -->
-      <a href="javascript:;" class="player"><img src="./img/player.png" alt="播放"></a>
-      <a href="javascript:;" class="player2"><img src="./img/stop.png" alt="播放"></a>
-      <!-- </div> -->
-
-      <a href="javascript:;" class="next"><img src="./img/next.png" alt="下一首"></a>
-      <div class="prograss_bar">
-        <div class="prograss_bar_info">
-          <span>那年初夏-任然</span>
-          <span class="time">00:01 / 3:36</span>
+      <a href="javascript:;" class="music_pre"></a>
+      <a href="javascript:;" class="music_play"></a>
+      <a href="javascript:;" class="music_next"></a>
+      <div class="music_progress_info">
+        <div class="music_progress_top">
+          <span class="music_progress_name"></span>
+          <span class="music_progress_time">00:00 / 05:23</span>
         </div>
-        <div class="prograss_bar_line">
-          <div class="line_top">
-            <div class="line_dot"></div>
+        <div class="music_progress_bar">
+          <div class="music_progress_line">
+            <div class="music_progress_dot"></div>
           </div>
         </div>
       </div>
-      <a href="javascript:;" class="circle"><img src="./img/circle.png" alt="循环"></a>
-      <a href="javascript:;" class="circle1"><img src="./img/order.png" alt="单曲循环"></a>
-      <a href="javascript:;" class="love"><img src="./img/love.png" alt="喜欢"></a>
-      <a href="javascript:;" class="love1"><img src="./img/love_hover.png" alt="喜欢"></a>
-      <a href="javascript:;"><img src="./img/down.png" alt="下载"></a>
-      <a href="javascript:;"><img src="./img/comment.png" alt="评论"></a>
-      <div class="vol">
-        <img src="./img/vol.png" alt="">
-        <img class="slience" src="./img/slience.png" alt="">
-        <div class="vol_bar">
-          <div class="vol_bar_top">
-            <div class="vol_bar_dot"></div>
+      <a href="javascript:;" class="music_mode"></a>
+      <a href="javascript:;" class="music_fav"></a>
+      <a href="javascript:;" class="music_down"></a>
+      <a href="javascript:;" class="music_comment"></a>
+
+      <div class="music_voice_info">
+        <a href="javascript:;" class="music_voice_icon"></a>
+        <div class="music_voice_bar">
+          <div class="music_voice_line">
+            <div class="music_voice_dot"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="mask">
-    <div class="mask_bg"></div>
-  </div>
+  <div class="mask_bg"></div>
+  <div class="mask"></div>
+  <audio src=""></audio>
 </body>
 
 </html>
